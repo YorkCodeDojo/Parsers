@@ -9,9 +9,9 @@ namespace ParserDemo.Tests
         [TestMethod]
         public void ParseABWorks()
         {
-            var Aparser = new CharParser('A');
-            var Bparser = new CharParser('B');
-            var ABparser = new ThenParser(Aparser, Bparser);
+            var Aparser = new StartsWithChar('A');
+            var Bparser = new StartsWithChar('B');
+            var ABparser = new Then(Aparser, Bparser);
             var result = ABparser.Parse("AB");
 
             Assert.IsTrue(result.Success);
@@ -26,11 +26,11 @@ namespace ParserDemo.Tests
         [TestMethod]
         public void ParseABCWorks()
         {
-            var Aparser = new CharParser('A');
-            var Bparser = new CharParser('B');
-            var Cparser = new CharParser('C');
-            var ABparser = new ThenParser(Aparser, Bparser);
-            var ABCparser = new ThenParser(ABparser, Cparser);
+            var Aparser = new StartsWithChar('A');
+            var Bparser = new StartsWithChar('B');
+            var Cparser = new StartsWithChar('C');
+            var ABparser = new Then(Aparser, Bparser);
+            var ABCparser = new Then(ABparser, Cparser);
             var result = ABCparser.Parse("ABCD");
 
             Assert.IsTrue(result.Success);
@@ -47,9 +47,9 @@ namespace ParserDemo.Tests
         [TestMethod]
         public void ParseA_plus_B_plus_CWorks()
         {
-            var Aparser = new CharParser('A');
-            var Bparser = new CharParser('B');
-            var Cparser = new CharParser('C');
+            var Aparser = new StartsWithChar('A');
+            var Bparser = new StartsWithChar('B');
+            var Cparser = new StartsWithChar('C');
             var ABCparser = Aparser + Bparser + Cparser; 
             var result = ABCparser.Parse("ABCD");
 
@@ -66,9 +66,9 @@ namespace ParserDemo.Tests
         [TestMethod]
         public void ParseACBDoesNotWorks()
         {
-            var Aparser = new CharParser('A');
-            var Bparser = new CharParser('B');
-            var ABparser = new ThenParser(Aparser, Bparser);
+            var Aparser = new StartsWithChar('A');
+            var Bparser = new StartsWithChar('B');
+            var ABparser = new Then(Aparser, Bparser);
             var result = ABparser.Parse("AC");
 
             Assert.IsFalse(result.Success);

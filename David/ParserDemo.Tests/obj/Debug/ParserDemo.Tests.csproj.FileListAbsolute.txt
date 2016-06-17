@@ -1,0 +1,9 @@
+C:\CodeDojo\York\Parsers\David\ParserDemo.Tests\bin\Debug\ParserDemo.Tests.dll
+C:\CodeDojo\York\Parsers\David\ParserDemo.Tests\bin\Debug\ParserDemo.Tests.pdb
+C:\CodeDojo\York\Parsers\David\ParserDemo.Tests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\CodeDojo\York\Parsers\David\ParserDemo.Tests\bin\Debug\ParserDemo.dll
+C:\CodeDojo\York\Parsers\David\ParserDemo.Tests\bin\Debug\ParserDemo.pdb
+C:\CodeDojo\York\Parsers\David\ParserDemo.Tests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.xml
+C:\CodeDojo\York\Parsers\David\ParserDemo.Tests\obj\Debug\ParserDemo.Tests.csprojResolveAssemblyReference.cache
+C:\CodeDojo\York\Parsers\David\ParserDemo.Tests\obj\Debug\ParserDemo.Tests.dll
+C:\CodeDojo\York\Parsers\David\ParserDemo.Tests\obj\Debug\ParserDemo.Tests.pdb

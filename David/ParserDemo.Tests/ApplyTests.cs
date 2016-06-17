@@ -10,7 +10,7 @@ namespace ParserDemo.Tests
         [TestMethod]
         public void OneIs1()
         {
-            var parser = new CharParser('1').ApplyString(l => int.Parse(l));
+            var parser = new StartsWithChar('1').ApplyString(l => int.Parse(l));
             var result = parser.Parse("1");
 
             Assert.IsTrue(result.Success);
@@ -21,9 +21,9 @@ namespace ParserDemo.Tests
         [TestMethod]
         public void AplusBplusCisABC()
         {
-            var Aparser = new CharParser('A');
-            var Bparser = new CharParser('B');
-            var Cparser = new CharParser('C');
+            var Aparser = new StartsWithChar('A');
+            var Bparser = new StartsWithChar('B');
+            var Cparser = new StartsWithChar('C');
             var ABCparser = (Aparser + Bparser + Cparser).Apply(ListToString);
             var result = ABCparser.Parse("ABCD");
 

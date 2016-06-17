@@ -51,6 +51,8 @@
   </Choose>
   <ItemGroup>
     <Compile Include="ApplyTests.cs" />
+    <Compile Include="BinaryTests.cs" />
+    <Compile Include="Exercises.cs" />
     <Compile Include="ThenParserTests.cs" />
     <Compile Include="ManyParserTests.cs" />
     <Compile Include="EitherParserTests.cs" />

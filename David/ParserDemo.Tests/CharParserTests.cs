@@ -8,7 +8,7 @@ namespace ParserDemo.Tests
         [TestMethod]
         public void ParseAWorks()
         {
-            var parser = new CharParser('A');
+            var parser = new StartsWithChar('A');
             var result = parser.Parse("A");
 
             Assert.IsTrue(result.Success);
@@ -19,7 +19,7 @@ namespace ParserDemo.Tests
         [TestMethod]
         public void ParseBADoesNotWork()
         {
-            var parser = new CharParser('A');
+            var parser = new StartsWithChar('A');
             var result = parser.Parse("BA");
 
             Assert.IsFalse(result.Success);

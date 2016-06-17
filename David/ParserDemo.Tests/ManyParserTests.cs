@@ -10,8 +10,8 @@ namespace ParserDemo.Tests
         [TestMethod]
         public void ParseAAAAWorks()
         {
-            var Aparser = new CharParser('A');
-            var parser = new ManyParser(Aparser);
+            var Aparser = new StartsWithChar('A');
+            var parser = new Many(Aparser);
             var result = parser.Parse("AAAAB");
 
             Assert.IsTrue(result.Success);
@@ -22,10 +22,10 @@ namespace ParserDemo.Tests
         [TestMethod]
         public void ParseABABAACWorks()
         {
-            var Aparser = new CharParser('A');
-            var Bparser = new CharParser('B');
-            var BAparser = new EitherParser(Aparser, Bparser);
-            var parser = new ManyParser(BAparser);
+            var Aparser = new StartsWithChar('A');
+            var Bparser = new StartsWithChar('B');
+            var BAparser = new Either(Aparser, Bparser);
+            var parser = new Many(BAparser);
             var result = parser.Parse("ABABAAC");
 
             Assert.IsTrue(result.Success);
@@ -36,10 +36,10 @@ namespace ParserDemo.Tests
         [TestMethod]
         public void ParseDABABAACDoesNotWork()
         {
-            var Aparser = new CharParser('A');
-            var Bparser = new CharParser('B');
-            var BAparser = new EitherParser(Aparser, Bparser);
-            var parser = new ManyParser(BAparser);
+            var Aparser = new StartsWithChar('A');
+            var Bparser = new StartsWithChar('B');
+            var BAparser = new Either(Aparser, Bparser);
+            var parser = new Many(BAparser);
             var result = parser.Parse("DABABAAC");
 
             Assert.IsFalse(result.Success);

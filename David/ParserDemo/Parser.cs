@@ -46,12 +46,12 @@ namespace ParserDemo
 
         public static Parser operator +(Parser p1, Parser p2)
         {
-            return new ThenParser(p1, p2);
+            return new Then(p1, p2);
         }
 
         public static Parser operator |(Parser p1, Parser p2)
         {
-            return new EitherParser(p1, p2);
+            return new Either(p1, p2);
         }
 
     }

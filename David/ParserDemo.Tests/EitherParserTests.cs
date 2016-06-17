@@ -8,9 +8,9 @@ namespace ParserDemo.Tests
         [TestMethod]
         public void ParseAWorks()
         {
-            var Aparser = new CharParser('A');
-            var Bparser = new CharParser('B');
-            var parser = new EitherParser(Aparser, Bparser);
+            var Aparser = new StartsWithChar('A');
+            var Bparser = new StartsWithChar('B');
+            var parser = new Either(Aparser, Bparser);
             var result = parser.Parse("ADEF");
 
             Assert.IsTrue(result.Success);
@@ -21,9 +21,9 @@ namespace ParserDemo.Tests
         [TestMethod]
         public void ParseBWorks()
         {
-            var Aparser = new CharParser('A');
-            var Bparser = new CharParser('B');
-            var parser = new EitherParser(Aparser, Bparser);
+            var Aparser = new StartsWithChar('A');
+            var Bparser = new StartsWithChar('B');
+            var parser = new Either(Aparser, Bparser);
             var result = parser.Parse("B");
 
             Assert.IsTrue(result.Success);
@@ -35,9 +35,9 @@ namespace ParserDemo.Tests
         [TestMethod]
         public void ParseCDoesNotWork()
         {
-            var Aparser = new CharParser('A');
-            var Bparser = new CharParser('B');
-            var parser = new EitherParser(Aparser, Bparser);
+            var Aparser = new StartsWithChar('A');
+            var Bparser = new StartsWithChar('B');
+            var parser = new Either(Aparser, Bparser);
             var result = parser.Parse("C");
 
             Assert.IsFalse(result.Success);
@@ -49,11 +49,11 @@ namespace ParserDemo.Tests
         [TestMethod]
         public void ParseCWorks()
         {
-            var Aparser = new CharParser('A');
-            var Bparser = new CharParser('B');
-            var Cparser = new CharParser('C');
-            var ABparser = new EitherParser(Aparser, Bparser);
-            var parser = new EitherParser(ABparser, Cparser);
+            var Aparser = new StartsWithChar('A');
+            var Bparser = new StartsWithChar('B');
+            var Cparser = new StartsWithChar('C');
+            var ABparser = new Either(Aparser, Bparser);
+            var parser = new Either(ABparser, Cparser);
             var result = parser.Parse("CXYZ");
 
             Assert.IsTrue(result.Success);

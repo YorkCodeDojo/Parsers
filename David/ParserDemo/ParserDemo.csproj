@@ -40,13 +40,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ManyParser.cs" />
-    <Compile Include="EitherParser.cs" />
-    <Compile Include="CharParser.cs" />
+    <Compile Include="OneOrManyParser.cs" />
+    <Compile Include="Many.cs" />
+    <Compile Include="Either.cs" />
+    <Compile Include="Not.cs" />
+    <Compile Include="StartsWithAnyChar.cs" />
+    <Compile Include="StartsWith.cs" />
+    <Compile Include="StartsWithWord.cs" />
+    <Compile Include="StartsWithChar.cs" />
     <Compile Include="Parser.cs" />
     <Compile Include="ParseResult.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ThenParser.cs" />
+    <Compile Include="Then.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

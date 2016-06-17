@@ -1,0 +1,5 @@
+C:\CodeDojo\York\Parsers\David\ParserDemo\bin\Debug\ParserDemo.dll
+C:\CodeDojo\York\Parsers\David\ParserDemo\bin\Debug\ParserDemo.pdb
+C:\CodeDojo\York\Parsers\David\ParserDemo\obj\Debug\ParserDemo.csprojResolveAssemblyReference.cache
+C:\CodeDojo\York\Parsers\David\ParserDemo\obj\Debug\ParserDemo.dll
+C:\CodeDojo\York\Parsers\David\ParserDemo\obj\Debug\ParserDemo.pdb
