@@ -52,7 +52,15 @@
   <ItemGroup>
     <Compile Include="ApplyTests.cs" />
     <Compile Include="BinaryTests.cs" />
+    <Compile Include="Commands\Command.cs" />
+    <Compile Include="Commands\Declaration.cs" />
+    <Compile Include="Commands\MoveRight.cs" />
+    <Compile Include="Commands\MoveLeft.cs" />
+    <Compile Include="Commands\MoveUp.cs" />
+    <Compile Include="Commands\MoveDown.cs" />
+    <Compile Include="Commands\BlankLine.cs" />
     <Compile Include="Exercises.cs" />
+    <Compile Include="Commands\PrintCommand.cs" />
     <Compile Include="ThenParserTests.cs" />
     <Compile Include="ManyParserTests.cs" />
     <Compile Include="EitherParserTests.cs" />

@@ -31,6 +31,55 @@ namespace ParserDemo
             return this;
         }
 
+        public Parser Apply6(Func<object, object, object, object, object, object, object> fn)
+        {
+            this.Apply(l =>
+            {
+                var asList = l as List<object>;
+                if (asList == null) throw new Exception("Was expecting a list");
+                if (asList.Count() != 6) throw new Exception($"{asList.Count()} values were parsed,  not 6");
+                return fn(asList[0], asList[1], asList[2], asList[3], asList[4], asList[5]);
+            });
+            return this;
+        }
+
+        public Parser Apply4(Func<object, object, object, object, object> fn)
+        {
+            this.Apply(l =>
+            {
+                var asList = l as List<object>;
+                if (asList == null) throw new Exception("Was expecting a list");
+                if (asList.Count() != 4) throw new Exception($"{asList.Count()} values were parsed,  not 4");
+                return fn(asList[0], asList[1], asList[2], asList[3]);
+            });
+            return this;
+        }
+
+        public Parser Apply3(Func<object, object, object, object> fn)
+        {
+            this.Apply(l =>
+            {
+                var asList = l as List<object>;
+                if (asList == null) throw new Exception("Was expecting a list");
+                if (asList.Count() != 3) throw new Exception($"{asList.Count()} values were parsed,  not 3");
+                return fn(asList[0], asList[1], asList[2]);
+            });
+            return this;
+        }
+
+        public Parser Apply2(Func<object, object, object> fn)
+        {
+            this.Apply(l =>
+            {
+                var asList = l as List<object>;
+                if (asList == null) throw new Exception("Was expecting a list");
+                if (asList.Count() != 2) throw new Exception($"{asList.Count()} values were parsed,  not 2");
+                return fn(asList[0], asList[1]);
+            });
+            return this;
+        }
+
+
         public Parser ApplyString(Func<string, object> fn)
         {
             this.Apply(l =>

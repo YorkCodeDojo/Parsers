@@ -1,0 +1,9 @@
+C:\CodeDojo\York\Parsers\David\Generated\bin\Debug\Generated.exe.config
+C:\CodeDojo\York\Parsers\David\Generated\bin\Debug\Generated.exe
+C:\CodeDojo\York\Parsers\David\Generated\bin\Debug\Generated.pdb
+C:\CodeDojo\York\Parsers\David\Generated\obj\Debug\Generated.csprojResolveAssemblyReference.cache
+C:\CodeDojo\York\Parsers\David\Generated\obj\Debug\Generated.Form1.resources
+C:\CodeDojo\York\Parsers\David\Generated\obj\Debug\Generated.Properties.Resources.resources
+C:\CodeDojo\York\Parsers\David\Generated\obj\Debug\Generated.csproj.GenerateResource.Cache
+C:\CodeDojo\York\Parsers\David\Generated\obj\Debug\Generated.exe
+C:\CodeDojo\York\Parsers\David\Generated\obj\Debug\Generated.pdb
